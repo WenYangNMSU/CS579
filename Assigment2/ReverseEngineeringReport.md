@@ -67,5 +67,5 @@ However if the device is offline, the ransomeware uses a default key and userID,
 Even if the ransomeware randomly generate a key when the device is offline, it should still be possible to retrive the key, since it must be store somewhere on the computer. 
 
 This flaw can be avoided if the ransomware uses a asymmetric encryption algorthm(ie, RSA) where only the public key is known by the software. And the private key is still required for decryption and can not be obtained from the software or the source code.
-One downside of this decision would be that all infested device would share the same private key, although this issue can be mitigated if the software randomly pick from a set of pre determined public/private keypaires. 
+One downside of this decision would be that all infested device would share the same private key, although this issue can be mitigated if the software randomly pick from a set of pre determined public/private keypairs. 
 
