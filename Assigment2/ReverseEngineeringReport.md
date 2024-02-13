@@ -53,7 +53,7 @@ rule keypass_string : keypass
 Note: windows uses utf-16 encoding, and utf-16 only support bytes in multiple of 2. (utf-8 supports single byte character)
 
 It's unlikely that this rule would generate false positives, since it only detects an execuable containing a petty unique string that happens to be between 2.8MB and 3MB. 
-However, it is possible by pure chance that some random program just happened to contain those bytes in this sequence, the probablity for this to happen with an random distribution is 1 in (2^(8&ast29)) or 6.9&ast10^69.
+However, it is possible by pure chance that some random program just happened to contain those bytes in this sequence, the probablity for this to happen with an random distribution is 1 in (2^(8&ast;29)) or 6.9&ast;10^69.
 
 It's easy to get around of this rule by simply padding the file with 0s.
 
