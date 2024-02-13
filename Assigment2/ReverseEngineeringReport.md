@@ -35,7 +35,7 @@ While one could make Yara rule as comprehensive as possible, it is always possib
 Thus while one could use Yara rule to detect virus, it would be unwise to completely rely on it. In fact, devoting too much resource into making Yara rule would be proven futile unless the target is completely incapable of adapting. (ie, worms)
 
 The following Yara rule attempts to identify the string "!!!KEYPASS_DECRYPTION_INFO!!!" in utf-16 format
-
+```
 import "pe"
 rule keypass_string : keypass
 {
@@ -49,6 +49,7 @@ rule keypass_string : keypass
 	condition:
 		$text and pe.is_pe and filesize > 2.8MB and filesize < 3MB
 }
+```
 Note: windows uses utf-16 encoding, and utf-16 only support bytes in multiple of 2. (utf-8 supports single byte character)
 
 It's unlikely that this rule would generate false positives, since it only detects an execuable containing a petty unique string that happens to be between 2.8MB and 3MB. 
