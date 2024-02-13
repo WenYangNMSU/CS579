@@ -52,3 +52,19 @@ rule keypass_string : keypass
 Note: windows uses utf-16 encoding, and utf-16 only support bytes in multiple of 2. (utf-8 supports single byte character)
 
 It's unlikely that this rule would generate false positives, since it only detects an execuable containing a petty unique string that happens to be between 2.8MB and 3MB. 
+However, it is possible by pure chance that some random program just happened to contain those bytes in this sequence, the probablity for this to happen with an random distribution is 1 in (2^(8*29)) or 6.9*10^69.
+
+It's easy to get around of this rule by simply padding the file with 0s.
+
+## Additional information:
+Virus report by Orkhan Mamedov and Fedor Sinitsyn (2018):
+https://securelist.com/keypass-ransomware/87412/
+
+According to the report, the ransomware uses AES-256 symmetric encryption algorthm and relyings on internet connection to sent out the information to the server.
+However if the device is offline, the ransomeware uses a default key and userID, which makes decryption trivial. 
+
+Even if the ransomeware randomly generate a key when the device is offline, it should still be possible to retrive the key, since it must be store somewhere on the computer. 
+
+This flaw can be avoided if the ransomware uses a asymmetric encryption algorthm(ie, RSA) where only the public key is known by the software. And the private key is still required for decryption and can not be obtained from the software or the source code.
+One downside of this decision would be that all infested device would share the same private key, although this issue can be mitigated if the software randomly pick from a set of pre determined public/private keypaires. 
+
