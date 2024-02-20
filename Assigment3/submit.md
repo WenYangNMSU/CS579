@@ -43,8 +43,8 @@ Seg fault happens when the program tries to access memeory space that's not allo
 RSI and RDI are known as source index and destination index respectively. They were originally used in implicative instructions that took no input parameters. (MOVEB, move from source to destination)                                                                                
 
 # 2. Screen shot Ghidra and IDA
-![Ghidra screenshot](/Ghidra.png)
-![Ida screenshot](/Ida.png)
+![Ghidra screenshot](/Assigment3/Ghidra.png)
+![Ida screenshot](/Assigment3/Ida.png)
 
 # 3. crackme solution
 ```
