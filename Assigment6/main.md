@@ -106,23 +106,33 @@ done
 ```
 The key turns out to be "97659765". From there we can see that 97 seems to corrspond to "a", while 65 corrspond to "A". Futher testing indicats it's only checking the first 4 characters.
 
-## Crackme 3 Solution
-To solve this crackme, you need to input username and serial number
+## Crackme 5 Solution
+To solve this crackme, you need to input key
 
-My solution is 
+My solution is (can't figure out how to make the python code work, so used the one decompiled from ghidra). 
 ```
-import random
-import string
+#include <stdio.h>
+#include <string.h>
 
-rand1 = random.choices(string.ascii_uppercase, k=4)
-rand2 = random.choices(string.ascii_lowercase, k=4)
-username = rand2[0] + rand1[0] + rand2[1] + rand1[1] + rand2[2] + rand1[2] + rand2[3] + rand1[3]
-
-sn = str(ord(rand2[0])) + str(ord(rand1[0])) + str(ord(rand2[1])) + str(ord(rand1[1]))
-sn = sn[:8]
-
-print(username)
-print(sn)
+int main () {
+	char str[8] = "7030726e";
+	
+	char key[100] = {0};
+	int value = 0x35478;
+	char buffer[100];
+	for (int i = 0; i < 7; i++) {
+		int temp = *(i + str) + 0x5c;
+		value ^= 0;
+		temp += value;
+		temp ^= 4;		
+		value |= 0x2e39f3;
+		sprintf(buffer, "%d", temp);
+		strncat(key, buffer, strlen(buffer));
+		value <<= 7;
+	}
+	
+	printf ("%s\n", key);
+}
 ``` 
 
 ## How I did it using Ghidra (and any other tools you used like gdb):
@@ -130,4 +140,7 @@ print(sn)
 1. I opened the crackme in Ghidra  
 2. I found the main function and noticed.  
 --
-The author give a hint on readme, indication the encryption is just simple xor. 
+The other end seems to remove the program and exit. It happens if time isn't 13:37 or pid isn't 0x539.  
+There is a constant int and a const string. The constant int is xor with pid, first value of constant string is then added with const int. Oil function modfies both values. This process is repeated 7 times. Input must equal to the result of this process.
+
+The use of pid is replaced with 0 in the patch. 
