@@ -3,8 +3,13 @@ To solve this crackme, you need to input password to program parameter.
 
 My solution is 
 ```
+import random
+import string
 
+rand = random.choices(string.ascii_uppercase + string.digits, k=3)
+key = "0XY0-0" + rand[0] + rand[1] + "0-00" + rand[2] + "0-0YZ0"
 
+print(key)
 ``` 
 
 ## How I did it using Ghidra (and any other tools you used like gdb):
@@ -48,7 +53,7 @@ input\[13\] ^ input\[5\] < 10
 xor can't give negative number, so paper 1 lower is not possible state.  
 
 input\[3\] == input\[15\] == input\[10\] ^ input\[8\] + '0'  
-input\[12\] == input\[0\] input\[13\] ^ input\[5\] + '0'  
+input\[18\] == input\[0\] == input\[13\] ^ input\[5\] + '0'  
 
 scissors:  
 input\[2\] + input\[1\] >= 171
@@ -57,3 +62,4 @@ input\[17\] + input\[16\] != input\[2\] + input\[1\]
 
 cracker:  
 input\[14\] + input\[4\] + input\[9\] == 135
+
