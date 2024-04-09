@@ -10,7 +10,7 @@ https://infosecwriteups.com/part1-static-code-analysis-of-the-rat-njrat-2f273408
 
 ### RegShot
 Large amount of keys were added during program execution. Majority of those keys were related to device drivers. This is reasonable considering the virus intents to take over control of devices on the computer. 
-![explorer.exe](/Assigment8/device.png) 
+![explorer.exe](/Assigment8/driver.png) 
 
 The program also modfied large amount of binary under a icon key, I suspect this might be some kind of overflow attack. 
 ![explorer.exe](/Assigment8/icon.png) 
