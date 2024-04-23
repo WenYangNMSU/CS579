@@ -1,0 +1,17 @@
+C:\Users\wenya\source\repos\GUITest3\bin\Debug\net6.0-windows\GUITest3.exe
+C:\Users\wenya\source\repos\GUITest3\bin\Debug\net6.0-windows\GUITest3.deps.json
+C:\Users\wenya\source\repos\GUITest3\bin\Debug\net6.0-windows\GUITest3.runtimeconfig.json
+C:\Users\wenya\source\repos\GUITest3\bin\Debug\net6.0-windows\GUITest3.dll
+C:\Users\wenya\source\repos\GUITest3\bin\Debug\net6.0-windows\GUITest3.pdb
+C:\Users\wenya\source\repos\GUITest3\obj\Debug\net6.0-windows\GUITest3.Form1.resources
+C:\Users\wenya\source\repos\GUITest3\obj\Debug\net6.0-windows\GUITest3.csproj.GenerateResource.cache
+C:\Users\wenya\source\repos\GUITest3\obj\Debug\net6.0-windows\GUITest3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wenya\source\repos\GUITest3\obj\Debug\net6.0-windows\GUITest3.AssemblyInfoInputs.cache
+C:\Users\wenya\source\repos\GUITest3\obj\Debug\net6.0-windows\GUITest3.AssemblyInfo.cs
+C:\Users\wenya\source\repos\GUITest3\obj\Debug\net6.0-windows\GUITest3.csproj.CoreCompileInputs.cache
+C:\Users\wenya\source\repos\GUITest3\obj\Debug\net6.0-windows\GUITest3.dll
+C:\Users\wenya\source\repos\GUITest3\obj\Debug\net6.0-windows\refint\GUITest3.dll
+C:\Users\wenya\source\repos\GUITest3\obj\Debug\net6.0-windows\GUITest3.pdb
+C:\Users\wenya\source\repos\GUITest3\obj\Debug\net6.0-windows\GUITest3.genruntimeconfig.cache
+C:\Users\wenya\source\repos\GUITest3\obj\Debug\net6.0-windows\ref\GUITest3.dll
+C:\Users\wenya\source\repos\GUITest3\obj\Debug\net6.0-windows\GUITest3.Properties.Resources.resources
